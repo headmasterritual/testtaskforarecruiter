@@ -1,5 +1,5 @@
 # testtaskforarecruiter
-requiered:
+requiered:/n
 JDK
 Clone repo
 Run tests: ./gradlew clean test
