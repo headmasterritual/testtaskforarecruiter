@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Api tests" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-03-04T23:14:39" hostname="NKIZENKONB" time="4.25">
+  <properties/>
+  <testcase name="openTest()" classname="TestImplementation" time="4.25"/>
+  <system-out><![CDATA[222
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
