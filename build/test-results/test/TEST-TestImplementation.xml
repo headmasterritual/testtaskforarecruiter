@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <testsuite name="Selenide tests" tests="1" skipped="0" failures="1" errors="0" timestamp="2022-03-04T23:05:35" hostname="MacBook-Air-Anastasia.local" time="13.87">
   <properties/>
   <testcase name="openTest()" classname="TestImplementation" time="13.87">
@@ -172,4 +173,12 @@ INFO: Found CDP implementation for version 99 of 95
 [Test worker] INFO com.codeborne.selenide.webdriver.WebDriverFactory - Selenium WebDriver v. 4.0.0 build revision: 3a21814679
 [Test worker] INFO com.codeborne.selenide.drivercommands.CreateDriverCommand - Create webdriver in current thread 15: ChromeDriver -> ChromeDriver: chrome on MAC (7015628ef50eb2773bae23f0e5e9214a)
 ]]></system-err>
+=======
+<testsuite name="Api tests" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-03-04T23:14:39" hostname="NKIZENKONB" time="4.25">
+  <properties/>
+  <testcase name="openTest()" classname="TestImplementation" time="4.25"/>
+  <system-out><![CDATA[222
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+>>>>>>> 02b41dfb59b9b1a1d6008f10d2992afc6a257146
 </testsuite>

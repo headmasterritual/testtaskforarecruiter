@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: io.qameta.allure:allure-okhttp3:2.15.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.qameta.allure/allure-okhttp3/2.15.0/803fd91c332baf2c12d71a88c52652aa9c771034/allure-okhttp3-2.15.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.qameta.allure/allure-okhttp3/2.15.0/8deba9636b5d90a5ad8b707e56f304972c0c539c/allure-okhttp3-2.15.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
