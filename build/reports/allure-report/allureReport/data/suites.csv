@@ -1,0 +1,8 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Mon Mar 07 12:12:33 EET 2022","Mon Mar 07 12:12:33 EET 2022","77","","Api tests","","tests.task1","task5","task5()",""
+"failed","Mon Mar 07 12:12:30 EET 2022","Mon Mar 07 12:12:32 EET 2022","1702","","Api tests","","tests.task1","task1","task1()",""
+"passed","Mon Mar 07 12:12:32 EET 2022","Mon Mar 07 12:12:32 EET 2022","80","","Api tests","","tests.task1","task2","task2()",""
+"passed","Mon Mar 07 12:12:33 EET 2022","Mon Mar 07 12:12:34 EET 2022","1077","","Api tests","","tests.task1","task6","task6()",""
+"passed","Mon Mar 07 12:12:32 EET 2022","Mon Mar 07 12:12:32 EET 2022","45","","Api tests","","tests.task1","task3","task3()",""
+"passed","Mon Mar 07 12:12:34 EET 2022","Mon Mar 07 12:12:34 EET 2022","40","","Api tests","","tests.task1","task7","task7()",""
+"passed","Mon Mar 07 12:12:32 EET 2022","Mon Mar 07 12:12:33 EET 2022","49","","Api tests","","tests.task1","task4","task4()",""

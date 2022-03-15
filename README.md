@@ -1,4 +1,4 @@
-# testtaskforarecruiter
+# courseRestAssured
 requiered:
 JDK
 * Clone repo
