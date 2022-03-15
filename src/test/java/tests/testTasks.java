@@ -1,4 +1,5 @@
 package tests;
+import com.google.common.collect.Ordering;
 import helpers.jsons.json1;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
@@ -14,7 +15,6 @@ import java.io.File;
 import java.util.ArrayList;
 
 import static io.restassured.RestAssured.given;
-import static io.restassured.RestAssured.post;
 import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchema;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
@@ -109,12 +109,16 @@ public class testTasks extends basetest{
     }
     @Test
     void task11() {
-        given()
-                .when().get("/comments?_sort=id&_order=desc")
-                .then().assertThat()
-                .statusCode(200)
-                .body("id[0]", is(500));
+        ArrayList nums = (ArrayList) given()
+                .when()
+                .get("/comments?_sort=id&_order=desc")
+                .then()
+                .extract()
+                .jsonPath()
+                .getList("id");
 
+        boolean isInAscOrder = Ordering.natural().reverse().isOrdered(nums);
+        assertThat(isInAscOrder, is(true));
     }
     @Test
     void task12() {
@@ -174,7 +178,7 @@ public class testTasks extends basetest{
     }
     @Test
     void task17() {
-        File schema = new File("src/test/java/helpers/schema.json");
+        File schema = new File("src/test/java/helpers/jsons/schema.json");
         given()
                 .when().get("/users/10")
                 .then().assertThat()
@@ -184,11 +188,9 @@ public class testTasks extends basetest{
     }
     @Test
     void task18() {
-        System.out.println(requestBody);
         given()
                 .contentType(ContentType.JSON)
                 .accept(ContentType.JSON)
-//                .header("Content-Length", "<calculated when request is sent>")
                 .body(requestBody)
                 .when().post("/comments")
                 .then().assertThat()
@@ -196,7 +198,6 @@ public class testTasks extends basetest{
     }
     @Test
     void task19() {
-        System.out.println(test1.RandomMapPost());
         given()
                 .contentType(ContentType.JSON)
                 .accept(ContentType.JSON)
@@ -218,25 +219,23 @@ public class testTasks extends basetest{
     @Test
     void task21()  {
         String userId =
-               "Bearer " + given().
-                        contentType("application/json").
-                        body(test1.RandomMapReg()).
-                        when().
-                        post("/register").
-                        then().
-                        statusCode(201).
-                        extract().
-                        path("accessToken");
+                  given()
+                            .contentType("application/json")
+                            .body(test1.RandomMapReg())
+                            .when()
+                            .post("/register")
+                            .then()
+                            .statusCode(201)
+                            .extract()
+                            .path("accessToken");
         given()
                 .contentType(ContentType.JSON)
                 .accept(ContentType.JSON)
-                .header("Authorization", userId)
+                .header("Authorization", "Bearer " + userId)
                 .body(test1.RandomMapPost())
                 .when().post("/664/posts")
                 .then().assertThat()
                 .statusCode(201);
-
-
     }
     @Test
     void task22() {

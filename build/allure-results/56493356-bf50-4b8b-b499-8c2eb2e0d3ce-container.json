@@ -1,1 +1,0 @@
-{"uuid":"56493356-bf50-4b8b-b499-8c2eb2e0d3ce","name":"Api tests","children":["116161dc-2bcf-4266-b26a-5ee3a3a464a6"],"befores":[{"name":"init","status":"passed","stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1646948960153,"stop":1646948961115}],"afters":[],"start":1646948960101,"stop":1646948962162}

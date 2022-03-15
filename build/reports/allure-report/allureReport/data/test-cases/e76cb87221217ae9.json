@@ -1,0 +1,75 @@
+{
+  "uid" : "e76cb87221217ae9",
+  "name" : "task18()",
+  "fullName" : "tests.testTasks.task18",
+  "historyId" : "dc9cc4b87ddcc63982f37fd8624cc0ec",
+  "time" : {
+    "start" : 1647361468389,
+    "stop" : 1647361468521,
+    "duration" : 132
+  },
+  "description" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "init",
+    "time" : {
+      "start" : 1647361461910,
+      "stop" : 1647361462943,
+      "duration" : 1033
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "hasContent" : false,
+    "stepsCount" : 0
+  } ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "junit.platform.uniqueid",
+    "value" : "[engine:junit-jupiter]/[class:tests.testTasks]/[method:task18()]"
+  }, {
+    "name" : "host",
+    "value" : "NKizenkoNB"
+  }, {
+    "name" : "thread",
+    "value" : "11528@NKizenkoNB.Test worker(14)"
+  }, {
+    "name" : "framework",
+    "value" : "junit-platform"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "package",
+    "value" : "tests.testTasks"
+  }, {
+    "name" : "testClass",
+    "value" : "tests.testTasks"
+  }, {
+    "name" : "testMethod",
+    "value" : "task18"
+  }, {
+    "name" : "suite",
+    "value" : "Api tests"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "e76cb87221217ae9.json",
+  "parameterValues" : [ ]
+}

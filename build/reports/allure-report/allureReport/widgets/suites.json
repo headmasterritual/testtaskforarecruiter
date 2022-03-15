@@ -5,11 +5,11 @@
     "name" : "Api tests",
     "statistic" : {
       "failed" : 1,
-      "broken" : 0,
+      "broken" : 1,
       "skipped" : 0,
-      "passed" : 6,
+      "passed" : 24,
       "unknown" : 0,
-      "total" : 7
+      "total" : 26
     }
   } ]
 }
