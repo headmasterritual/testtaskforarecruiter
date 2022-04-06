@@ -1,6 +1,5 @@
 package helpers.jsons;
 
-import helpers.RandomStringGenerator;
 import org.json.JSONObject;
 
 import java.util.HashMap;

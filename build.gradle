@@ -32,6 +32,7 @@ dependencies {
     implementation  group: 'io.rest-assured', name: 'json-schema-validator', version: '4.2.0'
     implementation  group: 'io.rest-assured', name: 'json-path', version: '4.2.0'
     testImplementation  'org.hamcrest:hamcrest:2.2'
+    testImplementation 'com.codeborne:selenide:6.3.4'
 
 }
 
