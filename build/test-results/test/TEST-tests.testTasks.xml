@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Api tests" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-03-15T16:38:24" hostname="NKIZENKONB" time="1.728">
-  <properties/>
-  <testcase name="task11()" classname="tests.testTasks" time="1.728"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
