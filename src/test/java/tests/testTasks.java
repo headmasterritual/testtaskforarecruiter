@@ -23,6 +23,7 @@ import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Scanner;
+import java.util.stream.Collectors;
 
 import static com.codeborne.selenide.CollectionCondition.sizeGreaterThan;
 import static com.codeborne.selenide.Condition.text;
@@ -57,6 +58,7 @@ public class testTasks {
             e.printStackTrace();
         }
     }
+    static ArrayList<String> people = new ArrayList<String>();
 
 
     public static void first() throws IOException {
@@ -68,13 +70,13 @@ public class testTasks {
         String jsonfinal = json.toString();
 
         System.out.println(jsonfinal);
-        Response response = (Response) given()
+        int response = given()
                 .header("Content-Type", "application/json")
                 .body(jsonfinal)
                 .when().post("/api/auth/login")
                 .then()
-                .extract().response();
-        System.out.println(response.asString());
+                .extract().statusCode();
+        people.add(String.valueOf(response));
 
     }
     public static void second() throws IOException {
@@ -86,13 +88,13 @@ public class testTasks {
         String jsonfinal = json.toString();
 
         System.out.println(jsonfinal);
-        Response response = (Response) given()
+        int response = given()
                 .header("Content-Type", "application/json")
                 .body(jsonfinal)
                 .when().post("/api/v3/client/create_code")
                 .then()
-                .extract().response();
-        System.out.println(response.asString());
+                .extract().statusCode();
+        people.add(String.valueOf(response));
 
     }
     public static void third() throws IOException {
@@ -104,13 +106,14 @@ public class testTasks {
         String jsonfinal = json.toString();
 
         System.out.println(jsonfinal);
-        Response response = (Response) given()
+        int response = given()
                 .header("Content-Type", "application/json")
                 .body(jsonfinal)
                 .when().post("/login")
                 .then()
-                .extract().response();
-        System.out.println(response.asString());
+                .extract().statusCode();
+        people.add(String.valueOf(response));
+        System.out.println(response);
 
     }
     public static void fourth() throws IOException {
@@ -122,13 +125,13 @@ public class testTasks {
         String jsonfinal = json.toString();
 
         System.out.println(jsonfinal);
-        Response response = (Response) given()
+        int response = given()
                 .header("Content-Type", "application/json")
                 .body(jsonfinal)
                 .when().post("/login")
                 .then()
-                .extract().response();
-        System.out.println(response.asString());
+                .extract().statusCode();
+        people.add(String.valueOf(response));
 
     }
     public static void fifth() throws IOException {
@@ -157,13 +160,13 @@ public class testTasks {
         String jsonfinal2 = json2.toString();
         System.out.println(jsonfinal2);
 
-        Response response = (Response) given()
+        int response = given()
                 .header("Content-Type", "application/json")
                 .body(jsonfinal2)
                 .when().post("/uk/api/PM")
                 .then()
-                .extract().response();
-        System.out.println(response.asString());
+                .extract().statusCode();
+        people.add(String.valueOf(response));
 
     }
     public static void sixth() throws IOException {
@@ -175,7 +178,7 @@ public class testTasks {
         String jsonfinal = json.toString();
 
         System.out.println(jsonfinal);
-        Response response = (Response) given()
+        int response = given()
                 .header("Content-Type", "application/json")
                 .header("partnerkey", "easypay-v2")
                 .header("appid", "02e04e95-e967-4c16-891f-e91548b20e45")
@@ -183,8 +186,8 @@ public class testTasks {
                 .body(jsonfinal)
                 .when().post("/api/check")
                 .then()
-                .extract().response();
-        System.out.println(response.asString());
+                .extract().statusCode();
+        people.add(String.valueOf(response));
 
     }
     public static void seventh() throws IOException {
@@ -223,5 +226,19 @@ public class testTasks {
         fourth();
         fifth();
         sixth();
+        Map<String, Integer> frequency = people.stream()
+                // собираем элементы листа в карту
+                .collect(Collectors.toMap(
+                        // ключ - строка
+                        e -> e,
+                        // значение - число,
+                        // количество вхождений
+                        e -> 1,
+                        // суммируем количество вхождений
+                        Integer::sum));
+
+
+// Обходим карту и выводим содержимое
+        frequency.forEach((k, v) -> System.out.println(k + "Result by statuses: " + v));
     }
 }
